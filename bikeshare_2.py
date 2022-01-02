@@ -67,7 +67,7 @@ def load_data(city, month, day):
     df["Start Day"] = df["Start Time"].dt.day_name()
     df["Start Hour"] = df["Start Time"].dt.hour
 
-    # filter month and day based on user entry
+    # Use user entry to filter month and day
     if month != "all":
         month_list = ['january', 'february', 'march', 'april', 'may', 'june']
         month = month_list.index(month) + 1
