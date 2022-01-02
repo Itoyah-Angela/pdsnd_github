@@ -25,8 +25,8 @@ def get_filters():
         city = input("Kindly Enter any of the following city name(chicago,new york city,washington): ").lower().strip()
 
     # get user input for month (all, january, february, ... , june)
-    month = input("Enter a month(january,february,march,...,june or enter \"all\"): ").lower().strip()
-    month_list = ['all', 'january', 'february', 'march', 'april', 'may', 'june']
+    month = input("Enter a month(january,february,march,...,august or enter \"all\"): ").lower().strip()
+    month_list = ['all', 'january', 'february', 'march', 'april', 'may', 'june', 'july', 'august']
     while month not in month_list:
         print("invalid entry")
         month = input(
@@ -89,7 +89,7 @@ def time_stats(df):
     # display the most common month
     most_common_month = df["Start Month"].mode()[0] - 1
 
-    month_list = ["january", "february", "marcch", "april", "may", "june"]
+    month_list = ["january", "february", "marcch", "april", "may", "june","july","august"]
 
     print("\t The most common month is :  {}\n".format(month_list[most_common_month]))
 
